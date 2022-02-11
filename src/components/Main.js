@@ -1,12 +1,28 @@
 import React from 'react'
 import FilterBtns from './FilterBtns'
 import GamesList from './GamesList'
+import items from '../allData'
+import { useState } from 'react'
 
 const Main = () => {
+
+  const [games, setGames] = useState(items);
+
+  const filterGames = (btn) => {
+    if(btn === 'All') {
+      setGames(items);
+      return;
+    }
+    const filterGameData = items.filter(item => item.category === btn);  
+    setGames(filterGameData);
+  }
+    
+
+
   return (
     <main>
-        <FilterBtns />
-        <GamesList />
+        <FilterBtns filterGames={filterGames}  />
+        <GamesList games={games} />
     </main>
   )
 }

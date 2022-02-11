@@ -9,7 +9,7 @@ import Battlefield2042PS4 from './images/BattleField2042PS4.jpg'
 import FiveNightsatFreddysSecurityBreachPS4 from './images/FiveNightsatFreddysSecurityBreachPS4.jpg'
 import NBA2K22PS4 from './images/NBA2K22PS4.jpg'
 
-export default [
+const items =  [
         {
             id: 1,
             title: "Marvel Avenger's",
@@ -82,3 +82,4 @@ export default [
         }
     ];
 
+export default items; 

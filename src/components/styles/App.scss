@@ -17,31 +17,35 @@
 .section__filterbtns {
     height: 50px;
     width: auto;
+
         .section__container--filterbtns {
             display: flex;
             justify-content: center;
             max-width: 500px;
-            margin: 90px auto;
+            margin-top: 90px;
             border-bottom: 2px solid rgb(175, 175, 175);
+
+            .section__ul--filterbtns {
+                display: flex;
+                
+                .section__btn--filters {
+                    margin: 2px 5px;
+                    font-size: 0.85em;
+                    background-color: rgb(233, 113, 0);
+                    border: none;
+                }
+            }
         }
-        .section__ul--filterbtns {
-            display: flex;
-        }
-        .section__btn--filters {
-            margin: 2px 5px;
-            font-size: 0.85em;
-            background-color: rgb(233, 113, 0);
-            border: none;
-        }
+        
 }
 
 .section__gameslist {
     height: auto;
     width: auto;
-        .section__container--gameslist {
-            height: 100%;
-            width: 100%;
-        }
+    .section__container--gameslist {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .section__videogame {
@@ -54,10 +58,48 @@
     }
     .section__figure--videogame {
         height: 100%;
-        width: 200px;
-        }
+        width: 230px;
+        margin: auto;
+    }
+    .section__container--btn {
+        display: flex;
+        justify-content: flex-end;
+        transform: translate(9%, 50%);
+    }
+    .section__addbtn--videogame {
+        border-radius: 20px;
+    }
     .section__img--videogame {
         height: 100%;
         width: 100%;
+        box-shadow: 0px 0px 8px 1px rgb(136, 136, 136);
     }   
+    .section__description--videogame {
+        height: auto;
+        width: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        gap: 5px;
+    }
+    .section__title--videogame {
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+    .section__price--videogame {
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+    .section__buybtn--videogame {
+        height: 45px;
+        width: 55px;
+        grid-area: 1 / 2 / 4 / 3;
+        border-radius: 10px;
+        box-shadow: 0px 0px 8px 1px rgb(136, 136, 136);
+        font-weight: 600;
+        font-size: 1.25;
+    }
 }
