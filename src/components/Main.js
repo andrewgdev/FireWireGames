@@ -4,7 +4,7 @@ import GamesList from './GamesList'
 import items from '../allData'
 import { useState } from 'react'
 
-const Main = () => {
+const Main = ({ handleAddVideoGame }) => {
 
   const [games, setGames] = useState(items);
 
@@ -22,7 +22,7 @@ const Main = () => {
   return (
     <main>
         <FilterBtns filterGames={filterGames}  />
-        <GamesList games={games} />
+        <GamesList games={games} handleAddVideoGame={handleAddVideoGame} />
     </main>
   )
 }

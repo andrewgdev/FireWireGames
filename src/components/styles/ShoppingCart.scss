@@ -1,0 +1,83 @@
+@import 'reset.scss';
+
+.__shoppingcart {
+    height: 100%;
+    width: 100vw;
+}
+
+.title__container--yourcart {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.div__container--backbtn {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    .link__backbtn {
+
+    }
+}
+
+.section__cartitems {
+    height: auto;
+    width: 100%;
+    .section__container--cartitems {
+        height: auto;
+        width: 80%;
+        margin: 60px auto;
+        margin-bottom: 30px;
+        border: 2px solid rgb(218, 218, 218);
+        .section__container--clearcartbtn {
+            height: auto;
+            width: 100%;
+            text-align: right;
+        }
+    }
+}
+
+.cart__p--noitemsadded {
+    text-align: center;
+}
+
+.section__container--videogame {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .section__img--videogame {
+
+    }
+    .section__description--videogame {
+        grid-template-rows: auto auto;
+        
+    }
+}
+
+.cart__items--add {
+    font-size: 1em;
+    margin: 0 5px;
+}
+
+.cart__items--remove {
+    font-size: 1em;
+}
+
+.cart__item--quantity {
+    height: auto;
+    width: 100px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.cart__items--pricecontainer {
+    text-align: center;
+}
+
+.checkout__container--btn {
+    height: auto;
+    width: 100%;
+    text-align: center;
+}

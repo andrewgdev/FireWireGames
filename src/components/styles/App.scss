@@ -17,35 +17,31 @@
 .section__filterbtns {
     height: 50px;
     width: auto;
-
         .section__container--filterbtns {
             display: flex;
             justify-content: center;
             max-width: 500px;
-            margin-top: 90px;
+            margin: 90px auto;
             border-bottom: 2px solid rgb(175, 175, 175);
-
-            .section__ul--filterbtns {
-                display: flex;
-                
-                .section__btn--filters {
-                    margin: 2px 5px;
-                    font-size: 0.85em;
-                    background-color: rgb(233, 113, 0);
-                    border: none;
-                }
-            }
         }
-        
+        .section__ul--filterbtns {
+            display: flex;
+        }
+        .section__btn--filters {
+            margin: 2px 5px;
+            font-size: 0.85em;
+            background-color: rgb(233, 113, 0);
+            border: none;
+        }
 }
 
 .section__gameslist {
     height: auto;
     width: auto;
-    .section__container--gameslist {
-        height: 100%;
-        width: 100%;
-    }
+        .section__container--gameslist {
+            height: 100%;
+            width: 100%;
+        }
 }
 
 .section__videogame {

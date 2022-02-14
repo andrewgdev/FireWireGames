@@ -12,7 +12,7 @@ import NBA2K22PS4 from './images/NBA2K22PS4.jpg'
 const items =  [
         {
             id: 1,
-            title: "Marvel Avenger's",
+            title: "Marvel Avengers",
             price: 39.99,
             category: "Adventure",
             img: MarvelAvengersPS4,

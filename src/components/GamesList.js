@@ -1,20 +1,20 @@
 import VideoGame from './VideoGame';
 
-const GamesList = ({ games }) => {
+const GamesList = ({ games, handleAddVideoGame }) => {
 
 
 
   return (
     <section className='section__gameslist'>
-        <div className='section__container--gameslist container'>
-            {
-              games.map(item => <VideoGame 
-                key={item.id} 
-                img={item.img} 
-                title={item.title} 
-                price={item.price} />)
-            }
-        </div>
+        {
+          games.map(item => <VideoGame 
+            key={item.id} 
+            img={item.img} 
+            title={item.title} 
+            price={item.price}
+            item={item} 
+            handleAddVideoGame={handleAddVideoGame}/>)
+        }
     </section>
   )
 }

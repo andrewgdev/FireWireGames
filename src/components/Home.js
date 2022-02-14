@@ -1,12 +1,11 @@
-import React from 'react'
 import Header from './Header'
-import Main from './Main.js'
+import Main from './Main'
 
-const Home = () => {
+const Home = ({ handleAddVideoGame }) => {
     return (
         <div>
             <Header />
-            <Main />
+            <Main handleAddVideoGame={handleAddVideoGame} />
         </div>
   )
 }
