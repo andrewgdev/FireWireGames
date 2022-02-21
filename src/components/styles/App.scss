@@ -54,7 +54,7 @@
     }
     .section__figure--videogame {
         height: 100%;
-        width: 230px;
+        width: 250px;
         margin: auto;
     }
     .section__container--btn {
@@ -68,7 +68,6 @@
     .section__img--videogame {
         height: 100%;
         width: 100%;
-        box-shadow: 0px 0px 8px 1px rgb(136, 136, 136);
     }   
     .section__description--videogame {
         height: auto;
@@ -92,9 +91,7 @@
     .section__buybtn--videogame {
         height: 45px;
         width: 55px;
-        grid-area: 1 / 2 / 4 / 3;
         border-radius: 10px;
-        box-shadow: 0px 0px 8px 1px rgb(136, 136, 136);
         font-weight: 600;
         font-size: 1.25;
     }

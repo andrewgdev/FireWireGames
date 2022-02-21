@@ -1,7 +1,9 @@
 import { FaPlus } from 'react-icons/fa'
 import '../components/styles/App.scss'
+import { Link } from 'react-router-dom'
 
 const VideoGame = ({ img, title, price, item, handleAddVideoGame}) => {
+
 
 
   return (
@@ -15,7 +17,7 @@ const VideoGame = ({ img, title, price, item, handleAddVideoGame}) => {
                 <div className='section__description--videogame grid'>
                   <h2 className='section__title--videogame'>{title}</h2>
                   <p className='section__price--videogame'>${price}</p>
-                  <button className='btn-success btn section__buybtn--videogame' >BUY</button>
+                  <Link to="checkout" ><button className='btn-success btn section__buybtn--videogame' onClick={() => handleAddVideoGame(item)} >BUY</button></Link>
                 </div>
             </figure>
         </div>

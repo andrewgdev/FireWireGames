@@ -1,19 +1,21 @@
 import { Link } from 'react-router-dom'
 import { FaArrowLeft, FaPlus, FaMinus } from 'react-icons/fa'
 import '../components/styles/ShoppingCart.scss'
+import Header from './Header';
 
-const ShoppingCart = ({ cartItems, handleAddVideoGame, handleRemoveVideoGame, handleCartClearance }) => {
+const ShoppingCart = ({ cartItems, handleAddVideoGame, handleRemoveVideoGame, handleCartClearance, totalPrice}) => {
   
-  const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0);
   
 
   return (
+    
     <div className="__shoppingcart">
+      <Header />
         <div className="title__container--yourcart">
           <h1>Your Cart</h1>
         </div>
         <div className='div__container--backbtn'>
-          <Link to={"/"} className='link__backbtn'><button className='btn-primary btn'><FaArrowLeft /> Back</button></Link>
+          <Link to={"/"} className='link__backbtn'><button className='btn-primary btn'><FaArrowLeft /> Home</button></Link>
         </div>
         <section className='section__cartitems'>
           <div className='section__container--cartitems'>
@@ -44,15 +46,15 @@ const ShoppingCart = ({ cartItems, handleAddVideoGame, handleRemoveVideoGame, ha
               </figure>
               })}
               <div className='cart__items--pricecontainer'>
-                <p>Total</p>
-                <div className='cart__items--totalprice'>
-                  ${totalPrice}
+                <p>SubTotal:</p>
+                <div className='cart__container--totalprice'>
+                  <p className='cart__p--totalprice'>${totalPrice.toFixed(2)}</p>
                 </div>
               </div>
         </div>
-        </section>
+        </section>                                                         
         <div className='checkout__container--btn'>
-          <button className='btn-success btn checkout__btn'>Checkout</button>
+          <Link to="/checkout/" ><button className='btn-success btn checkout__btn'>Proceed Checkout</button></Link>
         </div>
     </div>
   );
