@@ -5,7 +5,7 @@ import Header from './Header';
 
 const ShoppingCart = ({ cartItems, handleAddVideoGame, handleRemoveVideoGame, handleCartClearance, totalPrice}) => {
   
-  
+  // APP.SCSS IS AFFECTED BY SHOPPINGCART.SCSS STYLE SHEET. DIRECT THEM TO AFFECT ONLY THEIR OWN COMPONENT
 
   return (
     
