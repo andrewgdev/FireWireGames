@@ -51,7 +51,10 @@ function App() {
                     handleRemoveVideoGame={handleRemoveVideoGame} 
                     handleCartClearance={handleCartClearance}
                     totalPrice={totalPrice} />} /> 
-                <Route path="/checkout/" element={<Checkout cartItems={cartItems} totalPrice={totalPrice}/>} />
+                <Route path="/checkout/" element={<Checkout 
+                    cartItems={cartItems} 
+                    totalPrice={totalPrice}/>} 
+                    handleCartClearance={handleCartClearance}/>
             </Routes>
         </BrowserRouter>
   );

@@ -45,15 +45,11 @@
 }
 
 .section__videogame {
-    height: 100%;
-    width: auto;
     .section__container--videogame {
-        height: 100%;
         max-width: 800px;
         margin: auto;
     }
     .section__figure--videogame {
-        height: 100%;
         width: 250px;
         margin: auto;
     }
@@ -66,11 +62,9 @@
         border-radius: 20px;
     }
     .section__img--videogame {
-        height: 100%;
         width: 100%;
     }   
     .section__description--videogame {
-        height: auto;
         width: auto;
         display: grid;
         grid-template-columns: auto auto;

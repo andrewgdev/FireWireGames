@@ -1,16 +1,14 @@
 import Header from './Header'
 import '../components/styles/Checkout.scss'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
-const Checkout = ({ cartItems, totalPrice }) => {
+const Checkout = ({ cartItems, totalPrice, handleCartClearance }) => {
     const [total, setTotal] = useState(totalPrice);
     let tax = total * 0.0471;
     let shippingCost = cartItems.length * 2;
     let finalTotal = total + tax + shippingCost;
 
-    const submitCheckoutForm = (e) => {
-        e.preventDefault();
+    const submitCheckoutForm = () => {
         alert("Thank You For Shopping at FireWire Games!")
     }
 
@@ -19,7 +17,7 @@ const Checkout = ({ cartItems, totalPrice }) => {
         <Header />
         <section className='games__section--checkout'>
             <div className='games__div--checkout'>
-            {cartItems.map( item => 
+            {cartItems.map(item => 
                 <figure className='chekout__figure--item' key={item.id}>
                     <img src={item.img} className='chekout__img--item' alt="" />
                     <p className='section__price--videogame'>${item.price}</p>
@@ -34,7 +32,7 @@ const Checkout = ({ cartItems, totalPrice }) => {
                     </div>
                 </section> 
                 <form className='checkout__container--btn' name='submitForm' action='#' onSubmit={submitCheckoutForm}>
-                    <button className='btn-success btn checkout__btn' type='submit'>Submit</button>
+                    <button className='btn-success btn checkout__btn' type='submit' onClick={() => handleCartClearance()}>Submit</button>
                 </form>
         </section>
     </>
