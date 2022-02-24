@@ -1,5 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
-@import './reset.scss';
+@import './reset';
+@import './checkout';
+@import './shoppingCart';
 
 
 .header__ {
@@ -8,9 +10,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 15px;
-        .header__h1--title {
-          color: rgb(0, 0, 0);
-        }
+    .header__h1--title {
+      color: rgb(0, 0, 0);
+    }
 }
 
 .section__filterbtns {
@@ -39,7 +41,7 @@
         max-width: 800px;
         margin: auto;
         .section__figure--videogame {
-            width: 250px;
+            width: 230px;
         }
         .section__container--btn {
             display: flex;
@@ -80,3 +82,130 @@
         }
     }
 }
+
+@media screen and (max-width: 500px) {
+    .section__filterbtns {
+        height: 100px;
+        .section__container--filterbtns {
+            max-width: 250px;
+            .section__ul--filterbtns {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: auto;
+                .section__btn--filters {
+                    width: 75px;
+                    margin: 5px 5px;
+                    font-size: 0.65em;
+                }
+            }
+        }
+    }
+    .section__videogame {
+        .section__container--videogame {
+            min-width: 200px;
+            .section__figure--videogame {
+                width: 200px;
+            }
+            .section__description--videogame {
+                width: 100px;
+                margin-top: 15px;
+                margin-bottom: 40px;
+                .section__title--videogame {
+                    width: 150px;
+                    font-size: 0.9em;
+                    font-weight: 700;
+                }
+                .section__price--videogame {
+                    font-weight: 600;
+                    font-size: 0.9em;
+                }
+                .section__buybtn--videogame {
+                    height: 45px;
+                    width: 55px;
+                    border-radius: 10px;
+                    font-weight: 600;
+                    font-size: 1.25;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .gameslist__section {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .gameslist__section {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+    .header__ {
+        max-width: 1100px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .gameslist__section {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+    }
+    .header__ {
+    //     max-width: 2000px;
+    //     margin: auto;
+        margin-top: 20px;
+        .header__h1--title {
+            font-size: 3em;
+        }
+        .header__btn--cartbtn {
+            font-size: 2em;
+            width: 70px;
+            border-radius: 15px;
+        }
+    }
+    .section__filterbtns {
+        height: 100px;
+        .section__container--filterbtns {
+            max-width: 750px;
+            .section__ul--filterbtns {
+                .section__btn--filters {
+                    margin: 3px 10px;
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+    
+    .section__addbtn--videogame {
+        font-size: 1.1em;
+    }
+    .section__videogame {
+        .section__container--videogame {
+            .section__figure--videogame {
+                width: 270px;
+            }
+        }
+        .section__description--videogame {
+            .section__title--videogame {
+                font-size: 1.5em;
+            }
+            .section__price--videogame {
+                font-size: 1.5em;
+            }
+            .section__buybtn--videogame {
+                width: 65px;
+                font-size: 1.25em;
+            }
+        }
+    }    
+}
+

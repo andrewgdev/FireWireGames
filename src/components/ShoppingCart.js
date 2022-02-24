@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom'
 import { FaArrowLeft, FaPlus, FaMinus } from 'react-icons/fa'
-import '../components/styles/ShoppingCart.scss'
+// import '../components/styles/ShoppingCart.scss'
 import Header from './Header';
 
 const ShoppingCart = ({ cartItems, handleAddVideoGame, handleRemoveVideoGame, handleCartClearance, totalPrice}) => {
   
-  // APP.SCSS IS AFFECTED BY SHOPPINGCART.SCSS STYLE SHEET. DIRECT THEM TO AFFECT ONLY THEIR OWN COMPONENT
 
   return (
     
@@ -15,7 +14,7 @@ const ShoppingCart = ({ cartItems, handleAddVideoGame, handleRemoveVideoGame, ha
           <h1>Your Cart</h1>
         </div>
         <div className='div__container--backbtn'>
-          <Link to={"/"} className='link__backbtn'><button className='btn-primary btn'><FaArrowLeft /> Home</button></Link>
+          <Link to="/" className='link__backbtn'><button className='btn-primary btn'><FaArrowLeft /> Home</button></Link>
         </div>
         <section className='section__cartitems'>
           <div className='section__container--cartitems'>
@@ -36,8 +35,8 @@ const ShoppingCart = ({ cartItems, handleAddVideoGame, handleRemoveVideoGame, ha
                 </div>
                 <div className='cartfunctions__div'>
                   <div className='cart__items--function'>
-                    <button className='btn-primary btn cart__items--add' onClick={() => handleAddVideoGame(item)}><FaPlus /></button>
                     <button className='btn-primary btn cart__items--remove' onClick={() => handleRemoveVideoGame(item)}><FaMinus /></button>
+                    <button className='btn-primary btn cart__items--add' onClick={() => handleAddVideoGame(item)}><FaPlus /></button>
                     <div className='cart__item--quantity'>
                       {item.quantity} x {item.price}
                     </div>
@@ -46,10 +45,7 @@ const ShoppingCart = ({ cartItems, handleAddVideoGame, handleRemoveVideoGame, ha
               </figure>
               })}
               <div className='cart__items--pricecontainer'>
-                <p>SubTotal:</p>
-                <div className='cart__container--totalprice'>
-                  <p className='cart__p--totalprice'>${totalPrice.toFixed(2)}</p>
-                </div>
+                  <p className='cart__p--totalprice'>SubTotal: ${totalPrice.toFixed(2)}</p>
               </div>
         </div>
         </section>                                                         

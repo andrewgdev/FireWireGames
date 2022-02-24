@@ -5,7 +5,7 @@ const GamesList = ({ games, handleAddVideoGame }) => {
 
 
   return (
-    <section>
+    <section className='gameslist__section'>
         {
           games.map(item => <VideoGame 
             key={item.id} 

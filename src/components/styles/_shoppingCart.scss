@@ -1,9 +1,5 @@
 @import 'reset.scss';
 
-.__shoppingcart {
-    height: 100%;
-    width: 100%;
-}
 
 .title__container--yourcart {
     text-align: center;
@@ -47,10 +43,16 @@
     align-items: center;
     gap: 20px;
     margin-top: 40px;
+    .cartfunctions__div {
+        text-align: center;
+    }
     .section__description--videogame {
         grid-template-rows: auto auto;
         .section__title--videogame {
             width: 200px;
+        }
+        .section__price--videogame {
+            font-weight: 500;
         }
     }
 }
@@ -69,10 +71,12 @@
     width: 100px;
     margin: 10px 0;
     text-align: center;
+    font-weight: 700;
 }
 
 .cart__items--pricecontainer {
     text-align: center; 
+    margin: 40px auto;
     .cart__p--totalprice {
         font-weight: 700;
         margin: 20px auto;
@@ -84,4 +88,12 @@
     width: 100%;
     text-align: center;
     margin: 30px auto;
+}
+
+@media screen and (min-width: 1440px) {
+    .section__cartitems {
+        .section__container--cartitems {
+            max-width: 1200px;
+        }
+    }
 }

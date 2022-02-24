@@ -1,5 +1,5 @@
 import Header from './Header'
-import '../components/styles/Checkout.scss'
+// import '../components/styles/Checkout.scss'
 import { useState } from 'react'
 
 const Checkout = ({ cartItems, totalPrice, handleCartClearance }) => {
@@ -19,16 +19,18 @@ const Checkout = ({ cartItems, totalPrice, handleCartClearance }) => {
             <div className='games__div--checkout'>
             {cartItems.map(item => 
                 <figure className='chekout__figure--item' key={item.id}>
+                    <div className='quantity__container'>
+                    </div>
                     <img src={item.img} className='chekout__img--item' alt="" />
-                    <p className='section__price--videogame'>${item.price}</p>
+                    <p className='section__price--videogame'>({item.quantity}) ${item.price}</p>
                 </figure>)}
             </div>
             <section className='section__price'>
                     <div className='container__div--price'>
-                        <p>SubTotal: ${total}</p>
-                        <p>Tax: ${tax.toFixed(2)}</p>
-                        <p>Shipping: ${shippingCost.toFixed(2)}</p>
-                        <p>Total: ${finalTotal.toFixed(2)}</p>
+                        <p><span className='totals__span--fontweight'>Subtotal:</span> ${total.toFixed(2)}</p>
+                        <p><span className='totals__span--fontweight'>Tax:</span> ${tax.toFixed(2)}</p>
+                        <p><span className='totals__span--fontweight'>Shipping:</span> ${shippingCost.toFixed(2)}</p>
+                        <p><span className='totals__span--fontweight'>Total:</span> ${finalTotal.toFixed(2)}</p>
                     </div>
                 </section> 
                 <form className='checkout__container--btn' name='submitForm' action='#' onSubmit={submitCheckoutForm}>

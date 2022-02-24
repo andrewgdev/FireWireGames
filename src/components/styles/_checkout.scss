@@ -1,0 +1,83 @@
+@import 'reset.scss';
+
+.games__section--checkout {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    .games__div--checkout {
+        height: auto;
+        max-width: 1000px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        gap: 20px;
+        .chekout__figure--items {
+            margin-top: 20px;
+            width: auto;
+        }
+        .quantity__container {
+            display: flex;
+            justify-content: flex-end;
+            // transform: translate(9%, 30%);
+        }
+        .chekout__img--item {
+            height: 125px;
+            text-align: center;
+        }
+        .section__price--videogame {
+            font-weight: 500;
+        }
+    }
+    .section__price {
+        height: auto;
+        max-width: 590px;
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: center;
+        .container__div--price {
+            max-width: 590px;
+            margin: auto;
+            p {
+                margin: 10px;
+                text-align: left;
+                font-weight: 500;
+            }
+            .totals__span--fontweight {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
+
+// @media screen and (min-width: 1000px) {
+//     // .games__section--checkout {
+//     //     max-width: 1000px;
+//     //     text-align: center;
+//     //     margin: 0 auto;
+//     //     margin-top: 50px;
+//     // } 
+//     // .section__price {
+//     //     max-width: 1000px;
+//     //     margin: 50px auto;
+//     //     .container__div--price {
+//     //         p {
+//     //             margin: 10px;
+//     //             text-align: left;
+//     //             font-weight: 500;
+//     //         }
+//     //         .totals__span--fontweight {
+//     //             font-weight: 700;
+//     //         }
+//     //     }
+//     // }
+// }
+
+
+
+
+

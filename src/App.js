@@ -14,7 +14,7 @@ function App() {
         const doesItExist = cartItems.find(item => item.id === game.id);
         if(doesItExist) {
             setCartItems(cartItems.map(item => item.id === game.id ? 
-            {...doesItExist, quantity: doesItExist.quantity + 1}: item));
+            {...doesItExist, quantity: doesItExist.quantity + 1} : item));
         } else {
             setCartItems([...cartItems, {...game, quantity: 1}]);
             console.log(cartItems.map(item => item));
