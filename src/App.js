@@ -11,7 +11,7 @@ function App() {
     const [cartItems, setCartItems] = useState([]);
 
     const handleAddVideoGame = (game) => {
-        const doesItExist = cartItems.find(item => item.id === game.id);
+        const doesItExist = cartItems.find(item => item.id === game.id); // WILL THIS STILL WORK IF DELETED, DO WE NEED TO ESTABLISH WHETHER OR NOT THIS
         if(doesItExist) {
             setCartItems(cartItems.map(item => item.id === game.id ? 
             {...doesItExist, quantity: doesItExist.quantity + 1} : item));
@@ -36,10 +36,7 @@ function App() {
         setCartItems([]);
     }
 
-    
-
-  const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0);
-
+    const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0);
 
     return (
         <BrowserRouter>

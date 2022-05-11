@@ -1,5 +1,4 @@
 import Header from './Header'
-// import '../components/styles/Checkout.scss'
 import { useState } from 'react'
 
 const Checkout = ({ cartItems, totalPrice, handleCartClearance }) => {

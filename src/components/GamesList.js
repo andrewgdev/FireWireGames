@@ -2,8 +2,6 @@ import VideoGame from './VideoGame';
 
 const GamesList = ({ games, handleAddVideoGame }) => {
 
-
-
   return (
     <section className='gameslist__section'>
         {
