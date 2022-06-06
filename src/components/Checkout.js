@@ -1,5 +1,6 @@
 import Header from './Header'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Checkout = ({ cartItems, totalPrice, handleCartClearance }) => {
     const [total, setTotal] = useState(totalPrice);
@@ -8,7 +9,7 @@ const Checkout = ({ cartItems, totalPrice, handleCartClearance }) => {
     let finalTotal = total + tax + shippingCost;
 
     const submitCheckoutForm = () => {
-        alert("Thank You For Shopping at FireWire Games!")
+        <Link to="/"><h1 className='header__h1--title'>FireWire</h1></Link>
     }
 
     return (
