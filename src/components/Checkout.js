@@ -8,10 +8,6 @@ const Checkout = ({ cartItems, totalPrice, handleCartClearance }) => {
     let shippingCost = cartItems.length * 2;
     let finalTotal = total + tax + shippingCost;
 
-    const submitCheckoutForm = () => {
-        <Link to="/"><h1 className='header__h1--title'>FireWire</h1></Link>
-    }
-
     return (
     <>
         <Header />
@@ -33,9 +29,9 @@ const Checkout = ({ cartItems, totalPrice, handleCartClearance }) => {
                         <p><span className='totals__span--fontweight'>Total:</span> ${finalTotal.toFixed(2)}</p>
                     </div>
                 </section> 
-                <form className='checkout__container--btn' name='submitForm' action='#' onSubmit={submitCheckoutForm}>
-                    <button className='btn-success btn checkout__btn' type='submit' onClick={() => handleCartClearance()}>Submit</button>
-                </form>
+                <div className='checkout__container--btn'>
+                    <Link to="/"><button className='btn-success btn checkout__btn' type='submit' onClick={() => handleCartClearance()}>Submit</button></Link>
+                </div>
         </section>
     </>
   )
